@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        .register-container{
+            background-color: #E6E6FA;
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            display: block;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #E6E6FA;
+            margin-top: 100px;
+            padding: 0;
+            background-image: url('VVIT.png');
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 7px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .message {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .message p {
+            font-size: 14px;
+        }
+
+        .message a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        .message a:hover {
+            text-decoration: underline;
+        }
+        .portal-heading{
+            font-size:2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+<header>
+    <h2 class="portal-heading">Registration</h2>
+    <form action="http://localhost:9999/PlacementPortal/registerinsert" method="post">
+       
+        <label for="username">User Name:</label>
+        <input type="text"  name="uname" required>
+
+        <label for="password">Create Password:</label>
+        <input type="password"  name="pwd" required>
+
+        <label for="confirmpassword">Confirm Password:</label>
+        <input type="password"  name="cpwd" required>
+
+        
+
+        <input type="submit" value="Register">
+    </form>
+
+    <!-- Message with login link -->
+    <div class="message">
+        <p>If already registered, <a href="login.html">click here</a> to login.</p>
+    </div>
+</header>
+    </div>
+</body>
+</html>
