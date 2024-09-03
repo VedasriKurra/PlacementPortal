@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Graph</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        canvas {
+            /* Reduce the size of the canvas */
+            width: 400px !important; /* Adjust width */
+            height: 300px !important; /* Adjust height */
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myBarChart"></canvas>
+    <script>
+        const ctx = document.getElementById('myBarChart').getContext('2d');
+        const myBarChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['1', '2', '3', '4', '5', '6'],
+                datasets: [{
+                    label: 'Number of Students',
+                    data: [58, 30, 26, 12, 2, 1],
+                    backgroundColor: '#EB3678', // All bars with the same color
+                    borderColor: '#EB3678', // Optional: match border color with bar color
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Students',
+                            color: '#333', // Dark text color
+                            font: {
+                                size: 14
+                            }
+                        },
+                        grid: {
+                            color: 'rgba(50, 50, 50, 0.7)', // Darker grid lines
+                            lineWidth: 2 // Thicker grid lines
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Number of Offers',
+                            color: '#333', // Dark text color
+                            font: {
+                                size: 14
+                            }
+                        },
+                        grid: {
+                            color: 'rgba(50, 50, 50, 0.7)', // Darker grid lines
+                            lineWidth: 2 // Thicker grid lines
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#333' // Dark text color for legend
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
